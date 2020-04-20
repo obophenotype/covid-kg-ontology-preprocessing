@@ -101,7 +101,7 @@ pipeline {
 				//sh 'cat env.txt'
 				//sh 'pwd'
 				//sh 'ls -AlF'
-				#sh 'ls -AlF /'
+				//sh 'ls -AlF /'
 				dir('.') {
 					git branch: TARGET_ONTOLOGY_BRANCH,
 						url: TARGET_ONTOLOGY_URL
