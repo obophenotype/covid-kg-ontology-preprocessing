@@ -1,5 +1,6 @@
 robot_opts: -vv
 clean: False
+timeout_external_processes: '300m'
 curie_map:
   RO: http://purl.obolibrary.org/obo/RO_
   HP: http://purl.obolibrary.org/obo/HP_
@@ -24,7 +25,7 @@ ontologies:
         biolink: biolink:PhenotypicFeature
     relations:
       - id: UPHENO:0000001
-        biolink: biolink:DiseaseOrPhenotypicFeatureAssociationToThingAssociation
+        biolink: biolink:related_to
         materialize: true
         chains:
           - BFO:0000051|RO:0000052
