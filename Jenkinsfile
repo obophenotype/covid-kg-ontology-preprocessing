@@ -112,8 +112,8 @@ pipeline {
 				dir('.') {
 					retry(1){
 						sh 'pwd'
-						sh 'ls'
-						sh 'python /var/lib/jenkins/workspace/kg-ontology-preprocessing_master@2/tools/ontology-kg-preprocessing-kit.py covid-kg-ontology-prepro-config.yaml'
+						sh 'ls /tools'
+						sh 'sh okpk.sh covid-kg-ontology-prepro-config.yaml'
 						//sh 'covid-kg-ontology-prepro-config.yaml'
 					}
 				}
