@@ -70,7 +70,7 @@ pipeline {
 		stage('Initialize') {
 			steps {
 				// Upgrading docker image
-				sh 'docker pull obolibrary/odkfull:latest'
+				sh 'docker pull matentzn/okpk:latest'
 				// Start preparing environment.
 				sh 'env > env.txt'
 				sh 'echo $BRANCH_NAME > branch.txt'
@@ -86,7 +86,7 @@ pipeline {
 		stage('Produce ontology') {
 			agent {
 				docker {
-					image 'obolibrary/okpk:latest'
+					image 'matentzn/okpk:latest'
 					// Reset Jenkins Docker agent default to original
 					// root.
 					//args '-u root:root -v /foo:/work -e ROBOT_JAVA_ARGS=-Xmx120G'
