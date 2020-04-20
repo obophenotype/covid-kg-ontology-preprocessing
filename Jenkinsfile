@@ -112,7 +112,7 @@ pipeline {
 				dir('.') {
 					retry(1){
 						sh 'pwd'
-						sh 'ls /tools'
+						//sh 'ls /tools'
 						sh 'sh okpk.sh covid-kg-ontology-prepro-config.yaml'
 						//sh 'covid-kg-ontology-prepro-config.yaml'
 					}
