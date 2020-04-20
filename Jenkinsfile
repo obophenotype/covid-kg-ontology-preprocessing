@@ -72,14 +72,14 @@ pipeline {
 				// Upgrading docker image
 				sh 'docker pull matentzn/okpk:latest'
 				// Start preparing environment.
-				sh 'env > env.txt'
-				sh 'echo $BRANCH_NAME > branch.txt'
-				sh 'echo "$BRANCH_NAME"'
-				sh 'cat env.txt'
-				sh 'cat branch.txt'
-				sh 'echo $START_DAY > dow.txt'
-				sh 'echo "$START_DAY"'
-				archiveArtifacts artifacts: "env.txt"
+				//sh 'env > env.txt'
+				//sh 'echo $BRANCH_NAME > branch.txt'
+				//sh 'echo "$BRANCH_NAME"'
+				//sh 'cat env.txt'
+				//sh 'cat branch.txt'
+				//sh 'echo $START_DAY > dow.txt'
+				//sh 'echo "$START_DAY"'
+				//archiveArtifacts artifacts: "env.txt"
 			}
 		}
 		
@@ -97,11 +97,11 @@ pipeline {
 			steps {
 				// Create a relative working directory and setup our
 				// data environment.
-				sh 'env > env.txt'
-				sh 'cat env.txt'
-				sh 'pwd'
-				sh 'ls -AlF'
-				sh 'ls -AlF /'
+				//sh 'env > env.txt'
+				//sh 'cat env.txt'
+				//sh 'pwd'
+				//sh 'ls -AlF'
+				#sh 'ls -AlF /'
 				dir('.') {
 					git branch: TARGET_ONTOLOGY_BRANCH,
 						url: TARGET_ONTOLOGY_URL
