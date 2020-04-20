@@ -111,7 +111,8 @@ pipeline {
 
 				dir('.') {
 					retry(1){
-						sh 'python ontology-kg-preprocessing-kit.py covid-kg ontology-prepro-config.yaml'
+						#sh 'python ontology-kg-preprocessing-kit.py covid-kg-ontology-prepro-config.yaml'
+						sh 'covid-kg-ontology-prepro-config.yaml'
 					}
 				}
 
