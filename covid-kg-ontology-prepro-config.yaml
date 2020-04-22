@@ -1,4 +1,4 @@
-robot_opts: -vv
+robot_opts: ''
 clean: False
 timeout_external_processes: 300m
 curie_map:
