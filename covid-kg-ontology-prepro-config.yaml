@@ -36,4 +36,4 @@ ontologies:
       - http://purl.obolibrary.org/obo/mondo.owl
   - id: go
     sources: 
-      - http://purl.obolibrary.org/obo/go/go-plus.owl
+      - http://purl.obolibrary.org/obo/go/extensions/go-plus.owl
