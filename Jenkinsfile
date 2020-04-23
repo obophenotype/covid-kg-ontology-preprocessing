@@ -113,13 +113,17 @@ pipeline {
 					retry(1){
 						sh 'pwd'
 						sh 'ls'
-						sh 'python /tools/ontology-kg-preprocessing-kit.py covid-kg-ontology-prepro-config.yaml'
+						//sh 'python /tools/ontology-kg-preprocessing-kit.py covid-kg-ontology-prepro-config.yaml'
 						//sh 'covid-kg-ontology-prepro-config.yaml'
 					}
 				}
 
 					// Move the products to somewhere "safe".
-					archiveArtifacts artifacts: "ontologies/*",
+					archiveArtifacts artifacts: "ontologies/hp/*",
+					onlyIfSuccessful: true
+					archiveArtifacts artifacts: "ontologies/go/*",
+					onlyIfSuccessful: true
+					archiveArtifacts artifacts: "ontologies/mondo/*",
 					onlyIfSuccessful: true
 
 					// Now that the files are safely away onto skyhook for
