@@ -113,7 +113,7 @@ pipeline {
 					retry(1){
 						sh 'pwd'
 						sh 'ls'
-						//sh 'python /tools/ontology-kg-preprocessing-kit.py covid-kg-ontology-prepro-config.yaml'
+						sh 'python /tools/ontology-kg-preprocessing-kit.py covid-kg-ontology-prepro-config.yaml'
 						//sh 'covid-kg-ontology-prepro-config.yaml'
 					}
 				}
